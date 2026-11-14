@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BỐN MÙA</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: #D8C77E #FFF6DE;
+    }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #FFF6DE; }
+    ::-webkit-scrollbar-thumb { background: #D8C77E; border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: #C6B155; }
+
+    ::selection { background: #FFD9E6; color: #D40000; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 32px 16px;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      background: linear-gradient(135deg, #E9F6EC 0%, #FFF6DE 30%, #FDEBE3 60%, #E7F1FB 100%);
+      background-size: 300% 300%;
+    }
+
+    .khung-tho {
+      width: 640px;
+      max-width: 100%;
+      padding: 24px;
+      background-color: #FFFDE7;
+      border: 1px solid #9E9E9E;
+      text-align: center;
+      box-shadow: 0 14px 36px rgba(96, 72, 16, 0.14);
+    }
+
+    .khung-tho h1 {
+      margin: 0 0 20px;
+      padding: 6px 0;
+      font-size: 26px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #D40000;
+      background-color: #FFD9E6;
+    }
+
+    .kho {
+      margin: 18px 0;
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .xanh { color: #0033CC; }
+    .do { color: #D40000; }
+
+    .khung-tho hr {
+      width: 55%;
+      height: 2px;
+      margin: 18px auto;
+      border: none;
+      background-color: #0033CC;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      body { animation: doi-mua 26s ease-in-out infinite; }
+      .khung-tho { animation: hien-khung 0.7s ease-out both; }
+      .khung-tho h1, .kho, .khung-tho hr { animation: hien-dong 0.8s ease-out both; }
+      .khung-tho h1 { animation-delay: 0.15s; }
+      .kho:nth-of-type(1) { animation-delay: 0.35s; }
+      .khung-tho hr:nth-of-type(1) { animation-delay: 0.5s; }
+      .kho:nth-of-type(2) { animation-delay: 0.65s; }
+      .khung-tho hr:nth-of-type(2) { animation-delay: 0.8s; }
+      .kho:nth-of-type(3) { animation-delay: 0.95s; }
+    }
+
+    @keyframes doi-mua {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    @keyframes hien-khung {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes hien-dong {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <article class="khung-tho">
+    <h1>BỐN MÙA</h1>
+    <p class="kho xanh">Xuân về hoa nở khắp trời<br>Hạ sang nắng cháy rạng ngời phố quen<br>Thu về lá rụng bên thềm.</p>
+    <hr>
+    <p class="kho do">Đông sang gió lạnh bên em đợi chờ<br>Bốn mùa là bốn giấc mơ<br>Thời gian đi mãi ta chờ đợi ai.</p>
+    <hr>
+    <p class="kho xanh">Một năm rồi lại một năm<br>Vẫn còn câu hát thì thầm quê hương<br>Chờ xuân nắng mới soi đường.</p>
+  </article>
+</body>
+</html>
